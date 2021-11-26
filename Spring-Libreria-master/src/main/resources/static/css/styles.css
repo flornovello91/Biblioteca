@@ -1570,6 +1570,10 @@ a:hover {
 		width: 352px;
 		padding: 3.875rem 2.75rem;
 	}
+        
+        .register-button{
+            padding: 1.875rem 43rem;
+        }
 	/* end of services */
 
 

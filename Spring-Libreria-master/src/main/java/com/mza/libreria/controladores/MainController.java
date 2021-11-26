@@ -22,4 +22,14 @@ public class MainController {
     public String article(){
         return "article.html";
     }
+    
+    @GetMapping("/registro")
+    public String registro(){
+        return "registro.html";
+    }
+    
+    @GetMapping("/login")
+    public String login(){
+        return "login.html";
+    }
 }

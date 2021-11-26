@@ -18,7 +18,7 @@
 	<meta name="twitter:card" content="summary_large_image"> <!-- to have large image post format in Twitter -->
 
     <!-- Webpage Title -->
-    <title>Biblioteca Virtual</title>
+    <title>Registrar</title>
     
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
@@ -32,7 +32,7 @@
 	<!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#navbarExample">
+<body>
     
     <!-- Navigation -->
     <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
@@ -48,23 +48,29 @@
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ms-auto navbar-nav-scroll">
                     <li class="nav-item">
-                        <a class="nav-link" href="#header">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Descargas</a>
+                        <a class="nav-link" href="index.html#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Drop</a>
                         <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                            <li><a class="dropdown-item" href="article">Libro</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="prueba">Editoriales</a></li>
-                            <li><div class="dropdown-divider"></div></li>
-                            <li><a class="dropdown-item" href="privacy.html">Autores</a></li>
+                            <li><a class="dropdown-item" href="article">Article Details</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item" href="terms.html">Terms Conditions</a></li>
+                            <div class="dropdown-divider"></div>
+                            <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="index.html#contact">Contact</a>
                     </li>
                 </ul>
                 <span class="nav-item social-icons">
@@ -86,116 +92,52 @@
     </nav> <!-- end of navbar -->
     <!-- end of navigation -->
 
-      
+
     <!-- Header -->
-    <header id="header" class="header">
+    <header class="ex-header">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
-                    <h1 class="h1-large">BIENVENIDO!</h1>
-                </div> <!-- end of col -->
-                <div class="col-lg-6">
-                    <div class="button-container">
-                        <a class="btn-solid-lg" href="login">Ingresar</a>
-                        <a class="btn-outline-lg" href="registro">Registrarse</a>
-                    </div> <!-- end of button-container -->
+                <div class="col-xl-10 offset-xl-1">
+                    <h1>Registrate!</h1>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
-    </header> <!-- end of header -->
+    </header> <!-- end of ex-header -->
     <!-- end of header -->
-    <!-- Services -->
-    <div id="services" class="cards-1 bg-gray">
+
+
+    <!-- Basic -->
+    <div class="ex-basic-1 pt-5 pb-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2 class="h2-heading">La biblioteca virtual mas completa. </h2>
-                    <p class="p-heading">Registrate y se parte de la comunidad!</p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-icon">
-                            <span class="fas fa-rocket"></span>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Libros</h4>
-                            <div class="card-text">Encontrá una gran variedad de libros disponibles para visualizar y descargar.</div>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-icon">
-                            <span class="far fa-clock"></span>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Autores</h4>
-                            <div class="card-text">Investigá acerca de los creadores de tus obras preferidas.</div>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-icon">
-                            <span class="far fa-comments"></span>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Editoriales</h4>
-                            <div class="card-text">Familiarizate con las editoriales que trajeron a la vida los mas maravillosos relatos.</div>
-                        </div>
-                    </div>
-                    <!-- end of card -->
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-        <div class = "register-button">
-            <a class="btn-outline-lg" href="registro">Registrarse</a>
-        </div>
-    <!-- Contact -->
-    <div id="contact" class="form-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="h2-heading">Hi, I’m @flornovello91</h2>
-                    <p class="p-heading">FULL STACK WEB DEVELOPER</p>
-                    <ul class="list-unstyled li-space-lg">
-                        <li><i class="fas fa-map-marker-alt"></i> &nbsp;Working remote</li>
-                        <li><i class="fas fa-phone"></i> &nbsp;<a href="tel:+54 9 2616055578">+54 92616055578</a></li>
-                        <li><i class="fas fa-envelope"></i> &nbsp;<a href="mailto:flornovello91@gmail.com">flornovello91@gmail.com</a></li>
-                    </ul>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1">
-                    
-                    <!-- Contact Form -->
                     <form>
                         <div class="form-group">
-                            <input type="text" class="form-control-input" placeholder="Name" required>
+                          <label for="">Nombre</label>
+                          <input type="text" placeholder="Ingresá tu nombre" class="form-control" id="" aria-describedby="">
+                          <small id="" class="form-text text-muted"></small>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control-input" placeholder="Email" required>
+                          <label for="">Apellido</label>
+                          <input type="text" placeholder="Ingresá tu apellido" class="form-control" id="" aria-describedby="">
+                          <small id="" class="form-text text-muted"></small>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control-textarea" placeholder="Message" required></textarea>
+                        <label for="exampleInputEmail1">Dirección de correo electrónico</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">Solo te mandaremos notificaciones cuando se ingresen nuevos libros! </small>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="form-control-submit-button">Submit</button>
+                          <label for="exampleInputPassword1">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1">
                         </div>
-                    </form>
-                    <!-- end of contact form -->
-
+                        <button type="button" class="btn btn-dark">Registrarme</button>
+                      </form>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
-    </div> <!-- end of form-1 -->
-    <!-- end of contact -->
-
+    </div> <!-- end of ex-basic-1 -->
+    <!-- end of basic -->
 
     <!-- Footer -->
     <div class="footer">
