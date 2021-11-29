@@ -28,8 +28,8 @@ public class MainController {
         return "registro.html";
     }
     
-    @GetMapping("/login")
-    public String login(){
-        return "login.html";
+    @GetMapping("/ingreso")
+    public String ingreso(){
+        return "ingreso.html";
     }
 }
