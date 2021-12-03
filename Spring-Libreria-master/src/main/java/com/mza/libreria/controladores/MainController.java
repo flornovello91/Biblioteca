@@ -23,11 +23,6 @@ public class MainController {
         return "article.html";
     }
     
-    @GetMapping("/registro")
-    public String registro(){
-        return "registro.html";
-    }
-    
     @GetMapping("/ingreso")
     public String ingreso(){
         return "ingreso.html";
