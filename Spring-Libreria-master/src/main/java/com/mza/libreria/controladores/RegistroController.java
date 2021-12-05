@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("")
+@RequestMapping("/")
 public class RegistroController {
     
     @Autowired
@@ -23,12 +23,13 @@ public class RegistroController {
     }
     
     @PostMapping("/registro")
-    public String registrar(ModelMap modelo,@RequestParam String nombre, @RequestParam String apellido, @RequestParam String email , @RequestParam Integer contraseña){
+    public String registrar(ModelMap modelo,@RequestParam (required = false) String nombre, @RequestParam (required = false) String apellido, @RequestParam (required = false) String email , @RequestParam (required = false) Integer contraseña){
         try{
-            usuarioService.registrarUsuario(nombre, apellido, email, contraseña);
-            return ("registro");
+            usuarioService.registrarUsuario(nombre,apellido,email,contraseña);
+            return "registro.html";
         }catch (Exception e){
-            return null;
+            System.out.println("Error");
+            return "registro.html";
         }
     }
     

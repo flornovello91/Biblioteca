@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -96,8 +96,8 @@
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
                     <div class="button-container">
-                        <a class="btn-solid-lg" href="ingreso">Ingresar</a>
-                        <a class="btn-outline-lg" href="registro">Registrarse</a>
+                        <a class="btn-solid-lg" th:href="@{/ingreso}">Ingresar</a>
+                        <a class="btn-outline-lg" th:href="@{/registroUsuario}">Registrarse</a>
                     </div> <!-- end of button-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->

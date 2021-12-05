@@ -18,13 +18,4 @@ public class MainController {
         return "index.html";
     }
     
-    @GetMapping("/article")
-    public String article(){
-        return "article.html";
-    }
-    
-    @GetMapping("/ingreso")
-    public String ingreso(){
-        return "ingreso.html";
-    }
 }
