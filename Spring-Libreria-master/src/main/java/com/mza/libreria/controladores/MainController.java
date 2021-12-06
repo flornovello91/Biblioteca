@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 //ESTO LO QUE NOS HACE ES MOSTRARNOS EL CAMINO QUE SEGUIRÁ LA URL PARA ESTA VISTA Y TODO LAS ACCIONES LLEVADAS 
 //A CABO EN LA MISMA. EN ESTE CASO 
-@RequestMapping("/")  
+//@RequestMapping("/")  
 
 public class MainController {
     

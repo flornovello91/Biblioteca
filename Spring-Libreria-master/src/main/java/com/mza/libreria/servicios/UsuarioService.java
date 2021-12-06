@@ -15,6 +15,7 @@ public class UsuarioService {
             
     public void registrarUsuario(String nombre,String apellido,String email,Integer contraseña) throws Exception{
         try {
+            
             Usuario usuario = new Usuario();
             
             validarDatos(nombre,apellido,email,contraseña);
