@@ -7,7 +7,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-//import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -23,7 +23,7 @@ public class RegistroController {
     }
     
     @PostMapping("/registro")
-    public String registrar(@RequestParam (required = false) String nombre, @RequestParam (required = false) String apellido, @RequestParam (required = false) String email , @RequestParam (required = false) Integer contraseña){
+    public String registrar(@RequestParam  String nombre, @RequestParam (required = false) String apellido, @RequestParam (required = false) String email , @RequestParam (defaultValue = "0") Integer contraseña){
         try{
             usuarioService.registrarUsuario(nombre,apellido,email,contraseña);
             return "registro.html";
@@ -33,21 +33,42 @@ public class RegistroController {
         }
     }
     
+    @GetMapping("/ingreso")
+    public String ingreso(){
+        return "ingreso.html";
+    }
+    
 }
 
 /*
-@Autowired
-    @PostMapping("/registro")
-    public String guardarLibro(ModelMap modelo,@RequestParam (required = false) Long isbn,@RequestParam String titulo,@RequestParam String autor,@RequestParam String editorial,@RequestParam (required = false) Integer anio)throws MyException{
-        try{
-            libroService.guardarLibro(isbn,titulo,autor,editorial,anio);
-            modelo.put("exito", "Guardado de manera exitosa!");
-            return ("formularioIngreso");
-        }catch (MyException e){
-            modelo.put("error", "Error en la carga del libro.");
-            return ("formularioIngreso");
-        }
+@GetMapping("/registro")
+    public String registro() {
+        return "nUsuario";
     }
-}
+
+    @PostMapping("/registro")
+    public String registrar(ModelMap modelo,
+                            @RequestParam String nombre,
+                            @RequestParam String apellido,
+                            @RequestParam String email,
+                            @RequestParam String clave1,
+                            @RequestParam String clave2) {
+
+        try {
+            sUsuario.registrar(nombre, apellido, email, clave1, clave2);
+        } catch (MiExcepcion ex) {
+
+            modelo.put("error", ex.getMessage());
+            modelo.put("nombre", nombre);
+            modelo.put("apellido", apellido);
+            modelo.put("email", email);
+            modelo.put("clave1", clave1);
+            modelo.put("clave2", clave2);
+            return "nUsuario";
+        }
+        modelo.put("titulo", "Bienvenido al Sistema de Gestion de Biblioteca");
+        modelo.put("descripcion", "Tu usuario fue registrado correctamente");
+        return "registro-exitoso";
+    }
 
 */

@@ -110,18 +110,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <form th:action="@{/usuario/registro}" method="POST">
+                    <form th:action="@{/registro}" method="post">
                         <div class="form-group">
                             <label>Nombre</label>
                             <input type="text" class="form-control" name="nombre" placeholder="Ingresá tu nombre" >
                         </div>
                         <div class="form-group">
                             <label>Apellido</label>
-                            <input type="text" class="form-control" placeholder="Ingresá tu apellido" >
+                            <input type="text" class="form-control" name="apellido" placeholder="" >
                         </div>
                         <div class="form-group">
-                            <label>Dirección de correo electrónico</label>
-                            <input type="email" class="form-control" placeholder="Ingresá una dirección de correo electrónico válida.">
+                            <label>Email</label>
+                            <input type="email" class="form-control" name="nombre" placeholder="" >
                         </div>
                         <div class="form-group">
                             <label>Contraseña</label>
