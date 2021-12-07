@@ -15,7 +15,7 @@ public class Usuario {
     private String nombre;
     private String apellido;
     private String email;
-    private Integer contraseña;
+    private String contraseña;
 
     public Usuario() {
     }
@@ -53,11 +53,11 @@ public class Usuario {
         this.email = email;
     }
 
-    public Integer getContraseña() {
+    public String getContraseña() {
         return contraseña;
     }
 
-    public void setContraseña(Integer contraseña) {
+    public void setContraseña(String contraseña) {
         this.contraseña = contraseña;
     }
     

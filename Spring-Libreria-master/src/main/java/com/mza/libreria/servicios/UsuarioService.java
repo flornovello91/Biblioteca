@@ -13,13 +13,12 @@ public class UsuarioService {
     private RepositorioUsuario repositorioUsuario;
             
             
-    public void registrarUsuario(String nombre,String apellido,String email,Integer contraseña) throws Exception{
+    public void registrarUsuario(String nombre,String apellido,String email,String contraseña) throws Exception{
         try {
-            
-            Usuario usuario = new Usuario();
-            
             validarDatos(nombre,apellido,email,contraseña);
             
+            Usuario usuario = new Usuario();
+
             usuario.setNombre(nombre);
             usuario.setApellido(apellido);
             usuario.setEmail(email);
@@ -32,7 +31,7 @@ public class UsuarioService {
         }
     }
     
-    public void validarDatos(String nombre,String apellido,String email,Integer contraseña) throws Exception{
+    public void validarDatos(String nombre,String apellido,String email,String contraseña) throws Exception{
         
         if (nombre==null || nombre.isEmpty() || nombre.contains(" ")){
             throw new Exception("Inserte un nombre.");
@@ -43,7 +42,7 @@ public class UsuarioService {
         if (email==null || email.isEmpty() || email.contains(" ")){
             throw new Exception("Inserte un email.");
         }
-        if (contraseña<8){
+        if (contraseña.length()<8){
             throw new MyException("Debe indicar una contraseña correcta.");
         }
     }

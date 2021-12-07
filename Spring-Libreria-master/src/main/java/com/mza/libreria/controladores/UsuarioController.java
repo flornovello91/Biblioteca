@@ -6,30 +6,30 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-//@RequestMapping("/usuario")
-public class RegistroController {
+@RequestMapping("/usuario")
+public class UsuarioController {
     
     @Autowired
     private UsuarioService usuarioService;
     
     @GetMapping("/registro")
     public String registro(){
-        return "registro.html";
+        return "registro";
     }
     
     @PostMapping("/registro")
-    public String registrar(@RequestParam  String nombre, @RequestParam (required = false) String apellido, @RequestParam (required = false) String email , @RequestParam (defaultValue = "0") Integer contraseña){
-        try{
-            usuarioService.registrarUsuario(nombre,apellido,email,contraseña);
-            return "registro.html";
+    public String registrar (ModelMap modelo,@RequestParam String nombre,@RequestParam String apellido, @RequestParam String email, @RequestParam String contraseña) throws Exception{
+        try {
+            usuarioService.registrarUsuario(nombre, apellido, email, contraseña);
+            //modelo.put("exito", "Guardado de manera exitosa!");
+            return ("registro");
         }catch (Exception e){
-            System.out.println("Error");
-            return "registro.html";
+            //modelo.put("error", "Error en la carga del libro.");
+            return ("registro");
         }
     }
     
@@ -37,16 +37,10 @@ public class RegistroController {
     public String ingreso(){
         return "ingreso.html";
     }
-    
+
 }
-
 /*
-@GetMapping("/registro")
-    public String registro() {
-        return "nUsuario";
-    }
-
-    @PostMapping("/registro")
+@PostMapping("/registro")
     public String registrar(ModelMap modelo,
                             @RequestParam String nombre,
                             @RequestParam String apellido,
@@ -70,5 +64,4 @@ public class RegistroController {
         modelo.put("descripcion", "Tu usuario fue registrado correctamente");
         return "registro-exitoso";
     }
-
 */
