@@ -1,106 +1,57 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-        <link rel="stylesheet" href="formularioIngreso.css">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-        <title>Registrar usuario</title>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" th:href="@{/css/registro.css}">
+    <title>Registro</title>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <ul>
+        <li><a th:href="@{/}">Inicio</a></li>
+        <li><a th:href="@{/}">Descargas</a></li>
+        <li><a th:href="@{/}">Drop</a></li>
+        <li><a th:href="@{/}">Contact</a></li>
+    </ul>
 
-        <!-- Styles -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/fontawesome-all.min.css" rel="stylesheet">
-        <link href="css/swiper.css" rel="stylesheet">
-        <link href="css/styles.css" rel="stylesheet">
-
-        <!-- Favicon  -->
-        <link rel="icon" href="images/favicon.png">
-    </head>
-    <body data-bs-spy="scroll" data-bs-target="#navbarExample">
-
-        <!-- Navigation -->
-        <nav id="navbarExample" class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation">
-            <div class="container">
-
-                <!-- Text Logo  -->
-                <a class="navbar-brand logo-text" href="index">Biblioteca virtual</a> 
-
-                <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-                    <ul class="navbar-nav ms-auto navbar-nav-scroll">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#header">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">Descargas</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Drop</a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                                <li><a class="dropdown-item" href="">Libro</a></li>
-                                <li><div class="dropdown-divider"></div></li>
-                                <li><a class="dropdown-item" href="">Editoriales</a></li>
-                                <li><div class="dropdown-divider"></div></li>
-                                <li><a class="dropdown-item" href="">Autores</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                    <span class="nav-item social-icons">
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-facebook-f fa-stack-1x"></i>
-                            </a>
-                        </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-twitter fa-stack-1x"></i>
-                            </a>
-                        </span>
-                    </span>
-                </div> <!-- end of navbar-collapse -->
-            </div> <!-- end of container -->
-        </nav> <!-- end of navbar -->
-        <!-- end of navigation -->
-
-
-        <div class="container">
+    <!--End of navbar -->
+    <h1>Registrarse</h1>
+    
+    <!-- Form  -->
+        <div class="register-form">
+            
             <form th:action="@{/usuario/registro}" method="POST" class="formulario-ingreso" >
-                <h3>Ingrese sesión</h3>
-                <br>
                 <div class="form-group">
-                    <label>Nombre</label>
+                    <label class="labels">Nombre</label>
                     <input type="text" class="form-control" name="nombre" placeholder="Ingrese Nombre/s" required>
                 </div>
                 <div class="form-group">
-                    <label>Apellido</label>
+                    <label class="labels">Apellido</label>
                     <input type="text" class="form-control" name="apellido" placeholder="Ingrese Apellido/s." required>
                 </div>
                 <div class="form-group">
-                    <label>Email</label>
+                    <label class="labels">Email</label>
                     <input type="text" class="form-control" name="email" placeholder="Ingrese dirección de correo válida" required>
                 </div>
                 <div class="form-group">
-                    <label>Contraseña</label>
+                    <label class="labels">Contraseña</label>
                     <input type="password" class="form-control" name="contraseña" placeholder="Ingrese su contraseña" required>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="submit" class="button">Guardar</button>
             </form>
         </div>
-    </div>
+
+    <!-- End form -->
+
+    <!-- Contact -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    
 </body>
-</html> 
+</html>

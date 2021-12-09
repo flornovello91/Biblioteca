@@ -1,0 +1,65 @@
+body{
+    background-image: url(../images/about-background.jpg);
+}
+/*NAVIGATION BAR*/
+ul {
+    list-style-type: none;
+    margin: 10;
+    padding: 0;
+    overflow: hidden;
+    color: white;
+  }
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    color: rgb(50, 219, 50);
+    border-radius:0.15rem;
+  }
+/* END OF NAVIGATION BAR*/
+
+
+  .register-form{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    background-color: rgb(147, 93, 179);
+    margin-left: 25.23rem;
+    margin-right: 25.23rem;
+    margin-top: 5rem;
+    border-radius: 0.25rem;
+  }
+  h1{
+    color: white;
+    margin-top: 5rem;
+    margin-left: 5.23rem;
+    margin-right: 25.23rem;
+  }
+.form-group{
+    margin-left: 0.75rem;
+}
+.form-control{
+    margin:auto;
+    margin-left: 1.23rem;
+    width: 90%;
+}
+.button{
+    color: white;
+    background-color: rgb(50, 219, 50);
+    border-radius: 0.25rem;
+    margin-left: 20rem;
+    margin-bottom: 1.5rem;
+}
+.labels{
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
