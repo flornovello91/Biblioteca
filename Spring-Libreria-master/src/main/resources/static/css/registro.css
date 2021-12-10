@@ -1,5 +1,6 @@
 body{
     background-image: url(../images/about-background.jpg);
+    font: 400 1rem/1.625rem "Open Sans", sans-serif;
 }
 /*NAVIGATION BAR*/
 ul {
@@ -30,7 +31,7 @@ ul {
 
 
   .register-form{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font: 400 1rem/1.625rem "Open Sans", sans-serif;
     font-weight: bold;
     background-color: rgb(147, 93, 179);
     margin-left: 25.23rem;
@@ -53,6 +54,7 @@ ul {
     width: 90%;
 }
 .button{
+    font: 400 1rem/1.625rem "Open Sans", sans-serif;
     color: white;
     background-color: rgb(50, 219, 50);
     border-radius: 0.25rem;
