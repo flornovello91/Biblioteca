@@ -1,9 +1,11 @@
 body{
-    background-image: url(../images/about-background.jpg);
+    background-image: url(../images/contact-background.jpg);
     font: 400 1rem/1.625rem "Open Sans", sans-serif;
 }
 /*NAVIGATION BAR*/
 ul {
+    margin-top: 15px;
+    font: 400 1rem/1.625rem "Open Sans", sans-serif;
     list-style-type: none;
     margin: 10;
     padding: 0;
@@ -11,10 +13,11 @@ ul {
     color: white;
   }
   li {
+      
     float: right;
   }
   
-  li a {
+  li a { 
     display: block;
     color: white;
     text-align: center;
@@ -22,46 +25,69 @@ ul {
     text-decoration: none;
   }
 
-  /* Change the link color to #111 (black) on hover */
-  li a:hover {
-    color: rgb(50, 219, 50);
-    border-radius:0.15rem;
+  a:hover {
+    text-decoration: none;
+    color : rgb(132, 221, 59);
   }
+  
 /* END OF NAVIGATION BAR*/
 
-
+/*FORM*/
   .register-form{
     font: 400 1rem/1.625rem "Open Sans", sans-serif;
     font-weight: bold;
-    background-color: rgb(147, 93, 179);
-    margin-left: 25.23rem;
-    margin-right: 25.23rem;
+    margin-left: 20.23rem;
+    margin-right: 20.23rem;
     margin-top: 5rem;
     border-radius: 0.25rem;
   }
   h1{
     color: white;
-    margin-top: 5rem;
+    margin-top: 3rem;
     margin-left: 5.23rem;
     margin-right: 25.23rem;
   }
 .form-group{
-    margin-left: 0.75rem;
+    width: 50rem;
+    margin-bottom: 20px;
+
 }
 .form-control{
-    margin:auto;
-    margin-left: 1.23rem;
-    width: 90%;
+    border-color: #655f74;
+    background-color: #4d475c;
+    height: 50px;
 }
 .button{
+    width: 30rem;
     font: 400 1rem/1.625rem "Open Sans", sans-serif;
     color: white;
-    background-color: rgb(50, 219, 50);
-    border-radius: 0.25rem;
-    margin-left: 20rem;
-    margin-bottom: 1.5rem;
+    background-color: rgb(132, 221, 59);
+    border-radius: 0.30rem;
+    margin-left: 8.656rem;
+    margin-bottom: 1rem;
+    height: 50px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.button:hover{
+    background-color: #4d475c;
+    border-style: solid;
+    border-color: rgb(132, 221, 59);
 }
 .labels{
     margin-top: 1rem;
     margin-bottom: 0.25rem;
 }
+.register-form .form-control::placeholder{
+    color: #ffffff;
+    text-indent: 10px;
+    font-size : 15px;
+}
+.register-form .form-control{
+    color: #ffffff;
+    text-indent: 10px;
+    font-size : 15px;
+}
+
+/*END FORM*/
+

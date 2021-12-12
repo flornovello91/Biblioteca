@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,13 +24,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/fontawesome-all.min.css" rel="stylesheet">
-    <link href="css/swiper.css" rel="stylesheet">
-    <link href="css/ingresso.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/fontawesome-all.min.css}" rel="stylesheet">
+    <link th:href="@{/css/swiper.css}" rel="stylesheet">
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+    <link th:href="@{/css/ingresso.css}" rel="stylesheet">
 	
-	<!-- Favicon  -->
+    <!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
 </head>
 <body>
@@ -49,45 +49,26 @@
             <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
                 <ul class="navbar-nav ms-auto navbar-nav-scroll">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                        <a class="nav-link" th:href="@{/}">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#services">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#about">About</a>
+                        <a class="nav-link" th:href="@{/}">Descargas</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-bs-toggle="dropdown" aria-expanded="false">Drop</a>
                         <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                            <li><a class="dropdown-item" href="article">Article Details</a></li>
-                            <div class="dropdown-divider"></div>
-                            <li><a class="dropdown-item" href="terms.html">Terms Conditions</a></li>
-                            <div class="dropdown-divider"></div>
-                            <li><a class="dropdown-item" href="privacy.html">Privacy Policy</a></li>
+                            <li><a class="dropdown-item" href="">Libro</a></li>
+                            <li><div class="dropdown-divider"></div></li>
+                            <li><a class="dropdown-item" href="">Editoriales</a></li>
+                            <li><div class="dropdown-divider"></div></li>
+                            <li><a class="dropdown-item" href="">Autores</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#contact">Contact</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
                 </ul>
-                <span class="nav-item social-icons">
-                    <span class="fa-stack">
-                        <a href="#your-link">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-facebook-f fa-stack-1x"></i>
-                        </a>
-                    </span>
-                    <span class="fa-stack">
-                        <a href="#your-link">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fab fa-twitter fa-stack-1x"></i>
-                        </a>
-                    </span>
-                </span>
+                
             </div> <!-- end of navbar-collapse -->
         </div> <!-- end of container -->
     </nav> <!-- end of navbar -->
@@ -106,17 +87,15 @@
     </header> <!-- end of ex-header -->
     
     <!-- end of header -->
-   <div class="ex-basic-1 pt-5 pb-5">
+   <div class="ex-basic-1 pt-5 pb-5 ingreso-form">
        <form class="ingreso">
           <div class="form-group">
-            <label for="exampleInputEmail1">Usuario</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Usuario" required>
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Contraseña</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="contraseña" required>
           </div>
-          <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+          <button type="submit" class="btn btn-primary boton">Iniciar Sesion</button>
         </form>
     </div>
     <!-- Footer -->
@@ -125,18 +104,21 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="footer-col first">
-                        <h6>About Elma</h6>
-                        <p class="p-small">He oppose at thrown desire of no. Announcing impression unaffected day his are unreserved indulgence. Him hard find read are you</p>
+                        <h6>About Me</h6>
+                        <p class="p-small">I'm a full stack java developer! I developed this project with the help of Java, Javascript, Springboot, Mysql,
+                            Maven</p>
                     </div> <!-- end of footer-col -->
                     <div class="footer-col second">
-                        <h6>Links</h6>
+                        <h6>Important Links</h6>
                         <ul class="list-unstyled li-space-lg p-small">
-                            <li>Important: <a href="terms.html">Terms & Conditions</a>, <a href="privacy.html">Privacy Policy</a></li>
-                            <li>Useful: <a href="#">Colorpicker</a>, <a href="#">Icon Library</a>, <a href="#">Illustrations</a></li>
-                            <li>Menu: <a href="#header">Home</a>, <a href="#projects">Projects</a>, <a href="#services">Services</a>, <a href="#contact">Contact</a></li>
+                            <li><a href="https://www.linkedin.com/in/florencia-novello/">Linkedin</a></li>
+                            <li><a href="https://github.com/flornovello91">Github</a></li>
+                            
                         </ul>
                     </div> <!-- end of footer-col -->
+                    
                     <div class="footer-col third">
+                        <!--
                         <span class="fa-stack">
                             <a href="#your-link">
                                 <i class="fas fa-circle fa-stack-2x"></i>
@@ -161,7 +143,8 @@
                                 <i class="fab fa-instagram fa-stack-1x"></i>
                             </a>
                         </span>
-                        <p class="p-small">We would love to hear from you <a href="mailto:contact@site.com"><strong>contact@site.com</strong></a></p>
+                    -->
+                        <p class="p-small">I would love to hear from you <a href="mailto:flornovello91@gmail.com"><strong>flornovello91@gmail.com</strong></a></p>
                     </div> <!-- end of footer-col -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -175,7 +158,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © <a href="#your-link">Your name</a></p>
+                    <p class="p-small">Copyright © <a href="#">Florencia Agustina Novello</a></p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->
